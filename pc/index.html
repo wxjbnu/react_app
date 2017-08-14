@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="速答让你的学习更加轻松">
+    <meta name="description" content="速答，轻松解决学习遇到的难题。">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            font-family: '微软雅黑'
+        }
+        nav{
+            width: 100%;
+            height: 60px;
+            background: #fff;
+            position: relative;
+        }
+        footer{
+            height: 120px;
+            width: 100%;
+            background: #ddd;
+            margin: 0;
+        }
+        .nav-wrap{
+            float:right;
+            padding-right:15%;
+            margin: 0;
+            height: 60px;
+            line-height: 60px;
+        }
+        .nav-wrap li{
+            list-style: none;
+            font-size: 16px;
+
+        }
+        .banner{
+            position: relative;
+        }
+        .hexagon {
+            width: 100px;
+            height: 55px;
+            background: red;
+            position: relative;
+        }
+        .hexagon:before {
+            content: "";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 25px solid red;
+        }
+        .hexagon:after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 25px solid red;
+        }
+        .sque{
+            width: 120px;
+            height: 120px;
+            background: #e9d;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img style="width: 48px;padding-top: 6px;padding-left: 5%;" src="images/icon.png" alt="">
+        <ul class="nav-wrap">
+            <li>首页</li>
+            <!-- <li>官方微信</li> -->
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div>
+            <img style="width:100%;display:block;" src="images/banner.jpg" alt="">
+        </div>
+        <div style="position: absolute;top:15%;left:20%;font-size:28px;color:#e9d;">
+            <p>速问一下</p>
+            <p style="padding-left:30px;">速答就到</p>
+        </div>
+    </div>
+
+    <div style="padding:30px 0;">
+        <div class="sque"></div>
+    </div>
+
+    <footer>
+        <div style="text-align: center;color:#333;padding-top:30px;">
+            粤ICP备17096444号
+        </div>
+    </footer>
+</body>
+</html>
