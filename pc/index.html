@@ -1,106 +1,316 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
+    <title>速答</title>
     <meta name="keywords" content="速答让你的学习更加轻松">
     <meta name="description" content="速答，轻松解决学习遇到的难题。">
+    <meta name="viewport" content="width=device-width">
+
     <style>
-        html,body{
+        html, body {
             margin: 0;
             padding: 0;
-            font-family: '微软雅黑'
-        }
-        nav{
-            width: 100%;
-            height: 60px;
-            background: #fff;
+            font-family: 'Microsoft YaHei', 'Avenir', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             position: relative;
         }
-        footer{
-            height: 120px;
+
+        #app {
+            /*text-align: center;*/
+            /*color: #2c3e50;*/
+            /*margin-top: 60px;*/
+        }
+        header {
+            height: 90px;
             width: 100%;
-            background: #ddd;
-            margin: 0;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999;
         }
-        .nav-wrap{
-            float:right;
-            padding-right:15%;
-            margin: 0;
-            height: 60px;
-            line-height: 60px;
+
+        footer {
+            background-color: #000; /*#2d2d2d*/
+            padding: 80px 0;
         }
-        .nav-wrap li{
+
+        ul {
+            margin: 0;
+            padding: 0;
             list-style: none;
-            font-size: 16px;
+        }
+
+        li {
+            float: left;
+            margin-left: 30px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3a4044;
+        }
+
+        li.active a {
+            color: #2082e6
+        }
+
+        .wrap {
+            padding-top: 90px;
+        }
+
+        .clearfix {
+            overflow: hidden;
+            _zoom: 1;
+        }
+
+        .nav-logo {
+            float: left;
+            width: 40%;
+        }
+
+        .nav-logo img {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .navbar-collapse {
+            float: right;
+        }
+
+        .navbar-toggle {
+            display: none;
+        }
+
+        .container {
 
         }
-        .banner{
-            position: relative;
+
+        .img-100 img {
+            width: 100%;
+            display: block;
         }
-        .hexagon {
-            width: 100px;
-            height: 55px;
-            background: red;
-            position: relative;
+
+        .p1 {
+
         }
-        .hexagon:before {
-            content: "";
+
+        .bord-left {
+            border-left: 1px solid;
+            padding-left: 6px;
+        }
+
+        .f-des {
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .f-copy {
+            margin-top: 40px;
+            padding: 0 5%;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .point {
+            cursor: pointer;
+        }
+
+        .ios {
             position: absolute;
-            top: -25px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 25px solid red;
+            width: 23%;
+            height: 13%;
+            left: 42%;
+            bottom: 29%;
         }
-        .hexagon:after {
-            content: "";
+
+        .android {
             position: absolute;
-            bottom: -25px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 25px solid red;
+            width: 23%;
+            height: 13%;
+            left: 42%;
+            bottom: 15%;
         }
-        .sque{
-            width: 120px;
-            height: 120px;
-            background: #e9d;
+
+        @media (max-width: 750px) {
+            header{
+                display: none;
+            }
+            .wrap{
+              padding-top: 0;
+            }
         }
+        /*@media (max-width: 768px){
+          header{
+            height: auto;
+          }
+          li{
+            float: none;
+          }
+          .navbar {
+              display: none;
+          }
+          .nav-logo{
+            float:left;
+            width: 60%;
+          }
+          .navbar-collapse {
+            float: none;
+            display:block!important
+          }
+
+        }*/
     </style>
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 </head>
-
 <body>
-    <nav>
-        <img style="width: 48px;padding-top: 6px;padding-left: 5%;" src="images/icon.png" alt="">
-        <ul class="nav-wrap">
-            <li>首页</li>
-            <!-- <li>官方微信</li> -->
+<header class="clearfix">
+    <div class="navbar-header"
+         style="height:90px;width:40%;float:left;display: flex;align-items: center;padding-left:3%;">
+        <img style="width:48px;" src="images/icon.png">
+    </div>
+
+    <nav class="collapse navbar-collapse" style="float:right;line-height:90px;padding-right:3%;">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:;">首页</a></li>
+            <!-- <li><a href="javascript:;">公司简介</a></li>
+            <li><a href="javascript:;">富力好房</a></li>
+            <li><a href="javascript:;">自在社区</a></li>  -->
+            <li><a href="javascript:;">联系我们</a></li>
         </ul>
-    </nav>
+    </nav><!-- /.navbar-collapse -->
 
-    <div class="banner">
-        <div>
-            <img style="width:100%;display:block;" src="images/banner.jpg" alt="">
+</header>
+
+<div class="wrap">
+    <div class="banner img-100" id="p1" style="position:relative;">
+        <img src="images/banner.jpg">
+    </div>
+    <!-- <div class="p1 img-100" id="p2">
+        <img src="./assets/p1.jpg">
+    </div>
+    <div class="p1 img-100" id="p3" style="position:relative;">
+        <img src="./assets/p21.jpg">
+        <div class="ios point">
+
         </div>
-        <div style="position: absolute;top:15%;left:20%;font-size:28px;color:#e9d;">
-            <p>速问一下</p>
-            <p style="padding-left:30px;">速答就到</p>
+        <div class="android point">
+
         </div>
     </div>
+    <div class="p1 img-100" id="p4">
+      <img src="./assets/p3.jpg">
+    </div>  -->
+</div>
 
-    <div style="padding:30px 0;">
-        <div class="sque"></div>
+<footer id="p5">
+
+    <!-- <p class="f-des" style="text-align:center;margin-top:8px;">
+        <span class="point" id="weibo">集团官方微博</span>
+        <span class="bord-left point" id="weixin">集团官方微信</span>
+        <span class="bord-left point" id="web">集团官网</span>
+    </p> -->
+    <p class="f-des" style="">
+        <span>联系电话: 18612533679</span>
+        <span class="bord-left">联系邮箱 32558152@qq.com</span>
+    </p>
+    <p class="f-des" style="">
+         <span>联系地址: </span> 
+    </p>
+    <!-- <p class="f-copy">Copyright©2016 Guangzhou ThinkinPower Internet Technology Co., Ltd. 版权所有 广州市思力智慧互联网科技有限公司</p> -->
+    <div style="padding-top:10px;">
+      <a style="display:block;text-align:center;color:#939393" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备17096444号</a>
+      <!-- <a style="display: table;margin: auto;padding-top:10px;" target="_blank"
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602001961"
+        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img src="assets/ba.png" style="float:left;"/>
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44010602001961号</p>
+        <div style="clear:both"></div>
+      </a> -->
+
     </div>
+</footer>
 
-    <footer>
-        <div style="text-align: center;color:#333;padding-top:30px;">
-            粤ICP备17096444号
-        </div>
-    </footer>
+<div id="wxqr" style="position: absolute; right: 3%; bottom: 50px; width: 20%; display: none;">
+    <div class="plr5">
+        <img style="width: 100%;" src="./assets/wxqr.jpg" alt="">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        // var lis = $('.nav li')
+
+        // var tt = 90 - 1;
+        // var heiarr = [];
+        // var len = lis.length;
+
+        // function inithei() {
+        //     heiarr = [];
+        //     for (var i = 0; i < len; i++) {
+
+        //         if (i == 0) {
+
+        //         } else {
+        //             heiarr.push($("#p" + i).offset().top - tt);
+        //         }
+        //     }
+        //     heiarr.push($("#p5").offset().top - tt);
+        // }
+
+        // inithei()
+
+        // $(window).resize(function () {
+        //     inithei()
+        // })
+        // lis.click(function (index) {
+
+        //     var index = $(this).index();
+        //     lis.removeClass("active")
+        //     $(this).addClass("active");
+
+
+        //     $('html,body').animate({scrollTop: heiarr[index] + 'px'}, 800);
+
+        // })
+
+        // $(document).scroll(function () {
+
+        // })
+
+        // $(".ios").click(function () {
+        //     window.location.href = 'https://itunes.apple.com/cn/app/fu-li-hao-fang/id1104100313'
+        // })
+
+        // $(".android").click(function () {
+        //     window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rfchina.app.wqhouse.client'
+        // })
+
+        // $("#weibo").click(function () {
+        //     window.location.href = 'http://weibo.com/rfchina2777'
+        // })
+
+        // $("#weixin").on('mouseenter', function () {
+        //     $("#wxqr").fadeIn();
+        // })
+        // $("#weixin").on('mouseleave', function () {
+        //     $("#wxqr").fadeOut();
+        // })
+
+        // $("#web").click(function () {
+        //     window.location.href = 'http://www.rfchina.com/2010/'
+        // })
+
+    })
+</script>
 </body>
 </html>
